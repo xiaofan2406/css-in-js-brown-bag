@@ -1,5 +1,6 @@
 import React from 'react';
 import EmotionCSSVarButton from 'components/EmotionCSSVarButton';
+import { withGithubInfo } from 'hocs';
 
 class EmotionCSSVar extends React.Component {
   state = {
@@ -43,4 +44,4 @@ class EmotionCSSVar extends React.Component {
   }
 }
 
-export default EmotionCSSVar;
+export default withGithubInfo(['emotion-js/emotion'])(EmotionCSSVar);

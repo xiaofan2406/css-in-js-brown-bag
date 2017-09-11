@@ -1,5 +1,6 @@
 import React from 'react';
 import JssButton from 'components/JssButton';
+import { withGithubInfo } from 'hocs';
 
 const { Perf } = window;
 
@@ -38,4 +39,4 @@ class Jss extends React.Component {
   }
 }
 
-export default Jss;
+export default withGithubInfo(['cssinjs/jss', 'cssinjs/react-jss'])(Jss);

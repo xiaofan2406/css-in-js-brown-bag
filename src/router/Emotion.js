@@ -1,5 +1,6 @@
 import React from 'react';
 import EmotionButton from 'components/EmotionButton';
+import { withGithubInfo } from 'hocs';
 
 class Emotion extends React.Component {
   state = {
@@ -36,4 +37,4 @@ class Emotion extends React.Component {
   }
 }
 
-export default Emotion;
+export default withGithubInfo(['emotion-js/emotion'])(Emotion);
