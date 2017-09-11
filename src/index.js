@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { serviceWorker } from 'utils';
+import Perf from 'react-addons-perf';
 
 import Router from './router';
 
+window.Perf = Perf;
 const rootElement = document.getElementById('root');
 
 if (process.env.NODE_ENV === 'development') {

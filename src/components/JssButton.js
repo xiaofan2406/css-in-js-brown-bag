@@ -10,8 +10,8 @@ const styles = {
     animation: 'fade-in 2s',
     padding: ({ size }) =>
       size === 'large'
-        ? '16px 12px'
-        : size === 'small' ? '8px 6px' : '12px 8px',
+        ? '12px 16px'
+        : size === 'small' ? '8px 10px' : '10px 12px',
     fontSize: ({ size }) =>
       size === 'large' ? '20px' : size === 'small' ? '12px' : '16px',
 

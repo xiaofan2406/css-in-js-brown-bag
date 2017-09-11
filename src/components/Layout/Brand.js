@@ -12,7 +12,6 @@ const brand = css`
     height: ${variables.Brand.logoHeight}px;
   }
   & span {
-    animation: fadeIn 2s ease;
     font-size: ${fontSizes.large}px;
     color: ${theme.inverseColor};
   }
@@ -27,9 +26,7 @@ class Brand extends React.Component {
     return (
       <div className={brand}>
         <img src={logo} alt="logo" />
-        <span>
-          {APP_TITLE}
-        </span>
+        <span>{APP_TITLE}</span>
       </div>
     );
   }
