@@ -39,6 +39,7 @@ module.exports = {
     'no-plusplus': 0, // allow i++
     'no-confusing-arrow': 0,
     'no-mixed-operators': 0,
+    'no-nested-ternary': 0,
     'react/jsx-indent': 0,
     'react/jsx-indent-props': 0,
     'react/jsx-closing-bracket-location': 0,
