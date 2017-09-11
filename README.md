@@ -10,6 +10,7 @@
 [coverage-badge]: https://img.shields.io/codecov/c/github/xiaofan2406/css-in-js-brown-bag.svg?style=flat-square
 [coverage]: https://codecov.io/gh/xiaofan2406/css-in-js-brown-bag
 
+Brown bag session about CSS in JS
 
 
 ## Get Started

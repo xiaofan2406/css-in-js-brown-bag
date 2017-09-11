@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Layout } from 'components';
+import Layout from 'components/Layout';
 import { asyncLoad } from 'hocs';
 import { ROUTES } from 'configs';
 
@@ -21,14 +21,6 @@ function Router() {
             exact={ROUTES.JSS.exact}
             component={asyncLoad({
               importer: () => import(/* webpackChunkName: "Jss" */ './Jss')
-            })}
-          />
-          <Route
-            path={ROUTES.STYLED_COMPONENTS.path}
-            exact={ROUTES.STYLED_COMPONENTS.exact}
-            component={asyncLoad({
-              importer: () =>
-                import(/* webpackChunkName: "StyledComponents" */ './StyledComponents')
             })}
           />
           <Route

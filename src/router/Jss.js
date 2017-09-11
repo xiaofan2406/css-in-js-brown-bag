@@ -1,5 +1,5 @@
 import React from 'react';
-import { JssButton } from 'components';
+import JssButton from 'components/JssButton';
 
 const { Perf } = window;
 

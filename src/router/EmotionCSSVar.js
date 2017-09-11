@@ -1,5 +1,5 @@
 import React from 'react';
-import { EmotionCSSVarButton } from 'components';
+import EmotionCSSVarButton from 'components/EmotionCSSVarButton';
 
 class EmotionCSSVar extends React.Component {
   state = {

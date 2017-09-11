@@ -1,5 +1,5 @@
 import React from 'react';
-import { EmotionButton } from 'components';
+import EmotionButton from 'components/EmotionButton';
 
 class Emotion extends React.Component {
   state = {

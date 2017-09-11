@@ -12,10 +12,7 @@ const Button = styled.button`
   border: ${({ color }) => `1px solid ${color}`};
   background-color: ${({ color }) => color};
   animation: ${fadeIn} 2s;
-  padding: ${({ size }) =>
-    size === 'large'
-      ? '12px 16px'
-      : size === 'small' ? '8px 10px' : '10px 12px'};
+  padding: 0.5em 0.8em;
   font-size: ${({ size }) =>
     size === 'large' ? '20px' : size === 'small' ? '12px' : '16px'};
   &:hover {

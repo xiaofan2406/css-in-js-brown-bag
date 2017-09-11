@@ -2,7 +2,7 @@
   "name": "css-in-js-brown-bag",
   "version": "0.0.0",
   "author": "Xiaofan Wu",
-  "description": "A simple boilerplate for starting new React projects.",
+  "description": "Brown bag session about CSS in JS",
   "keywords": [
     "react",
     "react-router",
@@ -21,22 +21,24 @@
     "node": ">=6"
   },
   "scripts": {
-    "dev": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --config ./config/webpack.dev.js",
-    "test": "NODE_ENV=test ./node_modules/.bin/jest --watch --env=jsdom --updateSnapshot",
-    "coverage": "NODE_ENV=test ./node_modules/.bin/jest --env=jsdom --coverage --watchAll --updateSnapshot",
+    "dev":
+      "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --config ./config/webpack.dev.js",
+    "test":
+      "NODE_ENV=test ./node_modules/.bin/jest --watch --env=jsdom --updateSnapshot",
+    "coverage":
+      "NODE_ENV=test ./node_modules/.bin/jest --env=jsdom --coverage --watchAll --updateSnapshot",
     "prebuild": "rm -rf ./dist",
-    "build": "NODE_ENV=production ./node_modules/.bin/webpack --config ./config/webpack.prod.js",
+    "build":
+      "NODE_ENV=production ./node_modules/.bin/webpack --config ./config/webpack.prod.js",
     "lint": "./node_modules/.bin/eslint -c .eslintrc.js ./src ./config",
     "prod": "NODE_ENV=production node ./config/test-prod-server"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
     "react": "^15.6.1",
     "react-addons-perf": "^15.4.2",
     "react-dom": "^15.6.1",
     "react-jss": "^7.1.0",
-    "react-router-dom": "^4.2.2",
-    "styled-components": "^2.1.2"
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -87,12 +89,8 @@
     "whatwg-fetch": "^2.0.3"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
+    "collectCoverageFrom": ["src/**/*.js"],
+    "setupFiles": ["<rootDir>/config/polyfills.js"],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js",
       "<rootDir>/src/**/?(*.)spec.js"
@@ -113,13 +111,8 @@
       "^utils(.*)$": "<rootDir>/src/utils$1",
       "^widgets(.*)$": "<rootDir>/src/widgets$1"
     },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "json"
-    ],
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
+    "moduleFileExtensions": ["js", "json"],
     "coverageThreshold": {
       "global": {
         "branches": 80,

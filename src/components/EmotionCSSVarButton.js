@@ -11,28 +11,27 @@ const fadeIn = keyframes`
 const className = css`
   border: var(--color);
   background-color: var(--color);
-  animation: ${fadeIn} 2s;
-  padding: var(--padding);
+  animation: var(--animation);
+  padding: 0.5em 0.8em;
   font-size: var(--fontSize);
   &:hover {
-    background-color: ${theme.inverseColor};
-    border: 1px solid ${colors.grey};
+    background-color: var(--hoverBg);
+    border: var(--hoverBorder);
   }
   &:focus {
     outline: none;
   }
 `;
 
-function EmotionButton({ label, color, size, ...rest }) {
+function EmotionCSSVarButton({ label, color, size, ...rest }) {
   return (
     <button
       className={className}
       style={{
         '--color': color,
-        '--padding':
-          size === 'large'
-            ? '12px 16px'
-            : size === 'small' ? '8px 10px' : '10px 12px',
+        '--animation': `${fadeIn} 2s`,
+        '--hoverBg': `${theme.inverseColor}`,
+        '--hoverBorder': `1px solid ${colors.grey}`,
         '--fontSize':
           size === 'large' ? '20px' : size === 'small' ? '12px' : '16px'
       }}
@@ -43,15 +42,15 @@ function EmotionButton({ label, color, size, ...rest }) {
   );
 }
 
-EmotionButton.propTypes = {
+EmotionCSSVarButton.propTypes = {
   label: PropTypes.string.isRequired,
   size: PropTypes.string,
   color: PropTypes.string
 };
 
-EmotionButton.defaultProps = {
+EmotionCSSVarButton.defaultProps = {
   size: 'normal',
   color: theme.primaryColor
 };
 
-export default EmotionButton;
+export default EmotionCSSVarButton;

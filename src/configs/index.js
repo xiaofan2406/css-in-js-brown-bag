@@ -10,10 +10,6 @@ export const ROUTES = {
     path: '/jss',
     name: 'Jss'
   },
-  STYLED_COMPONENTS: {
-    path: '/styled-component',
-    name: 'Styled Component'
-  },
   EMOTION: {
     path: '/emotion',
     name: 'Emotion'
