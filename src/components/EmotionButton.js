@@ -9,6 +9,7 @@ const fadeIn = keyframes`
 `;
 
 const Button = styled.button`
+  color: ${colors.black};
   border: ${({ color }) => `1px solid ${color}`};
   background-color: ${({ color }) => color};
   animation: ${fadeIn} 2s;

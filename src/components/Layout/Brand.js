@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from 'emotion/react';
-import { variables, fontSizes, theme } from 'styles';
+import { fontSizes, colors } from 'styles';
 import { APP_TITLE } from 'configs';
 import logo from 'assets/logo.svg';
 
@@ -9,11 +9,11 @@ const brand = css`
   align-items: center;
   & img {
     animation: spin infinite 10s linear;
-    height: ${variables.Brand.logoHeight}px;
+    height: 34px;
   }
   & span {
     font-size: ${fontSizes.large}px;
-    color: ${theme.inverseColor};
+    color: ${colors.black};
   }
 `;
 

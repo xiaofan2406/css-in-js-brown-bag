@@ -2,17 +2,17 @@ import React from 'react';
 import { css } from 'emotion';
 import { NavLink } from 'react-router-dom';
 import { ROUTES } from 'configs';
-import { theme, variables } from 'styles';
+import { theme, colors, variables } from 'styles';
 
 const navLink = css`
-  color: ${theme.inverseColor};
+  color: ${colors.black};
   text-decoration: none;
   padding: 0 0.5em;
   display: inline-block;
-  line-height: ${variables.Layout.headerHeight}px;
-  height: ${variables.Layout.headerHeight}px;
+  line-height: ${variables.headerHeight}px;
+  height: ${variables.headerHeight}px;
   :hover {
-    background-color: ${theme.bgAccentColor};
+    background-color: ${colors.grey};
   }
 `;
 

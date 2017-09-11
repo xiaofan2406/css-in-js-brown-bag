@@ -16,21 +16,16 @@ export const spacing = {
   internal: 6,
   internalBreak: 12,
   external: 8,
-  externalBreak: 24
+  externalBreak: 24,
+  break: 48
 };
 
 export const variables = {
-  Layout: {
-    headerHeight: 42
-  },
-  Brand: {
-    logoHeight: 34
-  }
+  headerHeight: 42
 };
 
 export const theme = {
   primaryColor: colors.blue,
-  bgColor: colors.black,
   inverseColor: colors.white,
   bgAccentColor: colors.grey,
   fontFamily: '"Segoe UI", Helvetica, Arial, sans-serif',

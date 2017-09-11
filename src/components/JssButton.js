@@ -5,6 +5,7 @@ import { theme, colors } from 'styles';
 
 const styles = {
   button: {
+    color: colors.black,
     border: ({ color }) => `1px solid ${color}`,
     backgroundColor: ({ color }) => color,
     animation: 'fade-in 2s',

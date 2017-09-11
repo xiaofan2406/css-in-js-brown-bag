@@ -9,6 +9,7 @@ const fadeIn = keyframes`
 `;
 
 const className = css`
+  color: var(--textColor);
   border: var(--color);
   background-color: var(--color);
   animation: var(--animation);
@@ -28,6 +29,7 @@ function EmotionCSSVarButton({ label, color, size, ...rest }) {
     <button
       className={className}
       style={{
+        '--textColor': colors.black,
         '--color': color,
         '--animation': `${fadeIn} 2s`,
         '--hoverBg': `${theme.inverseColor}`,
