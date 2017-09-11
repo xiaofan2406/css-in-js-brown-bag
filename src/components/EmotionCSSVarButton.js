@@ -18,6 +18,7 @@ const className = css`
   &:hover {
     background-color: var(--hoverBg);
     border: var(--hoverBorder);
+    color: var(--inverseTextColor);
   }
   &:focus {
     outline: none;
@@ -29,11 +30,12 @@ function EmotionCSSVarButton({ label, color, size, ...rest }) {
     <button
       className={className}
       style={{
-        '--textColor': colors.black,
+        '--textColor': colors.white,
         '--color': color,
         '--animation': `${fadeIn} 2s`,
         '--hoverBg': `${theme.inverseColor}`,
         '--hoverBorder': `1px solid ${colors.grey}`,
+        '--inverseTextColor': colors.black,
         '--fontSize':
           size === 'large' ? '20px' : size === 'small' ? '12px' : '16px'
       }}

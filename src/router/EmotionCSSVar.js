@@ -35,11 +35,7 @@ class EmotionCSSVar extends React.Component {
         <EmotionCSSVarButton label="Click Me" size="small" />
       </div>
     ) : (
-      <EmotionCSSVarButton
-        label="Start"
-        onClick={this.handleStart}
-        size="large"
-      />
+      <EmotionCSSVarButton label="Start" onClick={this.handleStart} />
     );
   }
 }

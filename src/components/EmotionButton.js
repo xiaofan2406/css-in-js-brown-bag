@@ -9,7 +9,7 @@ const fadeIn = keyframes`
 `;
 
 const Button = styled.button`
-  color: ${colors.black};
+  color: ${colors.white};
   border: ${({ color }) => `1px solid ${color}`};
   background-color: ${({ color }) => color};
   animation: ${fadeIn} 2s;
@@ -19,6 +19,7 @@ const Button = styled.button`
   &:hover {
     background-color: ${theme.inverseColor};
     border: 1px solid ${colors.grey};
+    color: ${colors.black};
   }
   &:focus {
     outline: none;

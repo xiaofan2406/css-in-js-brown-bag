@@ -1,6 +1,7 @@
 import React from 'react';
 import JssButton from 'components/JssButton';
 import { withGithubInfo } from 'hocs';
+import { getRange } from 'utils';
 
 const { Perf } = window;
 
@@ -26,15 +27,30 @@ class Jss extends React.Component {
     Perf.start();
   };
 
+  handleReset = () => {
+    this.setState({ start: false });
+    Perf.stop();
+  };
+
   render() {
-    return this.state.start ? (
+    return (
       <div>
-        <JssButton label="Click Me" size="large" />
-        <JssButton label="Click Me" />
-        <JssButton label="Click Me" size="small" />
+        <JssButton label="Start" onClick={this.handleStart} />
+        <JssButton label="Reset" onClick={this.handleReset} />
+        {this.state.start && (
+          <div>
+            {getRange(30).map((val, index) => (
+              <JssButton key={index} label="Click Me" size="large" />
+            ))}
+            {getRange(30).map((val, index) => (
+              <JssButton key={index} label="Click Me" />
+            ))}
+            {getRange(30).map((val, index) => (
+              <JssButton key={index} label="Click Me" size="small" />
+            ))}
+          </div>
+        )}
       </div>
-    ) : (
-      <JssButton label="Start" onClick={this.handleStart} size="large" />
     );
   }
 }

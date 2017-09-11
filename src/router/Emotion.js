@@ -1,6 +1,9 @@
 import React from 'react';
 import EmotionButton from 'components/EmotionButton';
 import { withGithubInfo } from 'hocs';
+import { getRange } from 'utils';
+
+const { Perf } = window;
 
 class Emotion extends React.Component {
   state = {
@@ -15,24 +18,39 @@ class Emotion extends React.Component {
   }
 
   componentDidUpdate() {
-    window.Perf.stop();
-    console.log(window.Perf.getLastMeasurements()[0]);
+    Perf.stop();
+    console.log(Perf.getLastMeasurements()[0]);
   }
 
   handleStart = () => {
     this.setState({ start: true });
-    window.Perf.start();
+    Perf.start();
+  };
+
+  handleReset = () => {
+    this.setState({ start: false });
+    Perf.stop();
   };
 
   render() {
-    return this.state.start ? (
+    return (
       <div>
-        <EmotionButton label="Click Me" size="large" />
-        <EmotionButton label="Click Me" />
-        <EmotionButton label="Click Me" size="small" />
+        <EmotionButton label="Start" onClick={this.handleStart} />
+        <EmotionButton label="Reset" onClick={this.handleReset} />
+        {this.state.start && (
+          <div>
+            {getRange(30).map((val, index) => (
+              <EmotionButton key={index} label="Click Me" size="large" />
+            ))}
+            {getRange(30).map((val, index) => (
+              <EmotionButton key={index} label="Click Me" />
+            ))}
+            {getRange(30).map((val, index) => (
+              <EmotionButton key={index} label="Click Me" size="small" />
+            ))}
+          </div>
+        )}
       </div>
-    ) : (
-      <EmotionButton label="Start" onClick={this.handleStart} size="large" />
     );
   }
 }

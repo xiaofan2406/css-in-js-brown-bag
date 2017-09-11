@@ -40,10 +40,12 @@ module.exports = {
     'no-confusing-arrow': 0,
     'no-mixed-operators': 0,
     'no-nested-ternary': 0,
+    'space-before-function-paren': 0,
     'react/jsx-indent': 0,
     'react/jsx-indent-props': 0,
     'react/jsx-closing-bracket-location': 0,
     'react/jsx-wrap-multilines': 0,
+    'react/no-array-index-key': 0,
     indent: 0, // prettier takes care of indenting
     'comma-dangle': [2, 'never'], // disallow trailing comma
     'global-require': 0,

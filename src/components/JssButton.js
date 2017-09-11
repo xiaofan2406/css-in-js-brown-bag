@@ -5,7 +5,7 @@ import { theme, colors } from 'styles';
 
 const styles = {
   button: {
-    color: colors.black,
+    color: colors.white,
     border: ({ color }) => `1px solid ${color}`,
     backgroundColor: ({ color }) => color,
     animation: 'fade-in 2s',
@@ -14,7 +14,8 @@ const styles = {
       size === 'large' ? '20px' : size === 'small' ? '12px' : '16px',
     '&:hover': {
       backgroundColor: theme.inverseColor,
-      border: `1px solid ${colors.grey}`
+      border: `1px solid ${colors.grey}`,
+      color: colors.black
     },
     '&:focus': {
       outline: 'none'

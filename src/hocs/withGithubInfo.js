@@ -11,18 +11,21 @@ const loader = css`
   align-items: center;
 `;
 
-const repoCss = css`
-  width: 240px;
-  height: 22px;
-  display: flex;
-  justify-content: space-between;
-  & span {
+const wrapper = css`
+  margin: ${spacing.externalBreak}px 0px;
+  & .repo {
+    width: 240px;
+    height: 22px;
     display: flex;
-    align-items: center;
-  }
-  & img {
-    width: 16px;
-    margin-right: ${spacing.internal};
+    justify-content: space-between;
+    & span {
+      display: flex;
+      align-items: center;
+    }
+    & img {
+      width: 16px;
+      margin-right: ${spacing.internal}px;
+    }
   }
 `;
 
@@ -45,15 +48,17 @@ const withGithubInfo = repoNames => Component => {
     render() {
       return this.state.repos.length > 0 ? (
         <div>
-          {this.state.repos.map(repo => (
-            <div className={repoCss} key={repo.id}>
-              <span>
-                <img src={githubMark} alt="github mark" />
-                <a href={repo.html_url}>{repo.name}</a>
-              </span>
-              <span>&#9733; {repo.stargazers_count}</span>
-            </div>
-          ))}
+          <div className={wrapper}>
+            {this.state.repos.map(repo => (
+              <div className="repo" key={repo.id}>
+                <span>
+                  <img src={githubMark} alt="github mark" />
+                  <a href={repo.html_url}>{repo.name}</a>
+                </span>
+                <span>&#9733; {repo.stargazers_count}</span>
+              </div>
+            ))}
+          </div>
           <Component {...this.props} />
         </div>
       ) : (
