@@ -6,12 +6,16 @@ export const ROUTES = {
     name: 'Home',
     exact: true
   },
-  ABOUT: {
-    path: '/about',
-    name: 'About'
+  JSS: {
+    path: '/jss',
+    name: 'Jss'
   },
-  CONTACT: {
-    path: '/contact',
-    name: 'Contact'
+  STYLED_COMPONENTS: {
+    path: '/styled-component',
+    name: 'Styled Component'
+  },
+  EMOTION: {
+    path: '/emotion',
+    name: 'Emotion'
   }
 };

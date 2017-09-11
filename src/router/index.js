@@ -17,18 +17,26 @@ function Router() {
             component={Home}
           />
           <Route
-            path={ROUTES.ABOUT.path}
-            exact={ROUTES.ABOUT.exact}
+            path={ROUTES.JSS.path}
+            exact={ROUTES.JSS.exact}
             component={asyncLoad({
-              importer: () => import(/* webpackChunkName: "About" */ './About')
+              importer: () => import(/* webpackChunkName: "Jss" */ './Jss')
             })}
           />
           <Route
-            path={ROUTES.CONTACT.path}
-            exact={ROUTES.CONTACT.exact}
+            path={ROUTES.STYLED_COMPONENTS.path}
+            exact={ROUTES.STYLED_COMPONENTS.exact}
             component={asyncLoad({
               importer: () =>
-                import(/* webpackChunkName: "Contact" */ './Contact')
+                import(/* webpackChunkName: "StyledComponents" */ './StyledComponents')
+            })}
+          />
+          <Route
+            path={ROUTES.EMOTION.path}
+            exact={ROUTES.EMOTION.exact}
+            component={asyncLoad({
+              importer: () =>
+                import(/* webpackChunkName: "Emotion" */ './Emotion')
             })}
           />
         </Switch>
