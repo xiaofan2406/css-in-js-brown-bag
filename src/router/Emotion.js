@@ -10,7 +10,7 @@ class Emotion extends React.Component {
   }
 
   componentDidMount() {
-    console.log(new Date() - this.time);
+    console.log('[Emotion] - componentDidMount: ', new Date() - this.time);
   }
 
   componentDidUpdate() {

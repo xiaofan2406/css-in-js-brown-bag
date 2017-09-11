@@ -39,6 +39,14 @@ function Router() {
                 import(/* webpackChunkName: "Emotion" */ './Emotion')
             })}
           />
+          <Route
+            path={ROUTES.EMOTION_CSS_VAR.path}
+            exact={ROUTES.EMOTION_CSS_VAR.exact}
+            component={asyncLoad({
+              importer: () =>
+                import(/* webpackChunkName: "Emotion CSS Var" */ './EmotionCSSVar')
+            })}
+          />
         </Switch>
       </Layout>
     </BrowserRouter>

@@ -17,5 +17,9 @@ export const ROUTES = {
   EMOTION: {
     path: '/emotion',
     name: 'Emotion'
+  },
+  EMOTION_CSS_VAR: {
+    path: '/emotion-css-var',
+    name: 'Emotion CSS Var'
   }
 };
