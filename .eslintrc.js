@@ -46,6 +46,7 @@ module.exports = {
     'react/jsx-closing-bracket-location': 0,
     'react/jsx-wrap-multilines': 0,
     'react/no-array-index-key': 0,
+    'react/no-unused-prop-types': 0,
     indent: 0, // prettier takes care of indenting
     'comma-dangle': [2, 'never'], // disallow trailing comma
     'global-require': 0,
@@ -60,7 +61,6 @@ module.exports = {
     'react/forbid-prop-types': 0, // allow PropTypes.object
     'react/jsx-filename-extension': 0, // enfore all .js extension
     'no-unused-vars': [2, { ignoreRestSiblings: true }],
-    'arrow-parens': [2, 'as-needed'],
-    'react/no-unused-prop-types': [2, { skipShapeProps: true }] // skip shape
+    'arrow-parens': [2, 'as-needed']
   }
 };

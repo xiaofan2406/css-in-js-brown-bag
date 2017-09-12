@@ -9,12 +9,12 @@ const fadeIn = keyframes`
 `;
 
 const className = css`
-  color: var(--textColor);
   border: var(--color);
   background-color: var(--color);
+  font-size: var(--fontSize);
+  color: var(--textColor);
   animation: var(--animation);
   padding: 0.5em 0.8em;
-  font-size: var(--fontSize);
   &:hover {
     background-color: var(--hoverBg);
     border: var(--hoverBorder);

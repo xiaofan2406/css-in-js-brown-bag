@@ -5,13 +5,13 @@ import { theme, colors } from 'styles';
 
 const styles = {
   button: {
-    color: colors.white,
     border: ({ color }) => `1px solid ${color}`,
     backgroundColor: ({ color }) => color,
-    animation: 'fade-in 2s',
-    padding: '0.5em 0.8em',
     fontSize: ({ size }) =>
       size === 'large' ? '20px' : size === 'small' ? '12px' : '16px',
+    color: colors.white,
+    animation: 'fade-in 2s',
+    padding: '0.5em 0.8em',
     '&:hover': {
       backgroundColor: theme.inverseColor,
       border: `1px solid ${colors.grey}`,
@@ -27,9 +27,9 @@ const styles = {
   }
 };
 
-function JssButton({ classes, sheet, label, size, ...rest }) {
+function JssButton({ classes, label, onClick }) {
   return (
-    <button className={classes.button} {...rest}>
+    <button className={classes.button} onClick={onClick}>
       {label}
     </button>
   );
@@ -37,13 +37,14 @@ function JssButton({ classes, sheet, label, size, ...rest }) {
 
 JssButton.propTypes = {
   classes: PropTypes.object.isRequired,
-  sheet: PropTypes.object.isRequired,
   label: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
   size: PropTypes.string,
   color: PropTypes.string
 };
 
 JssButton.defaultProps = {
+  onClick: null,
   size: 'normal',
   color: theme.primaryColor
 };
