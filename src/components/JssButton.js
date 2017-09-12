@@ -12,8 +12,9 @@ const styles = {
     color: colors.white,
     animation: 'fade-in 2s',
     padding: '0.5em 0.8em',
+    margin: '4px',
     '&:hover': {
-      backgroundColor: theme.inverseColor,
+      'background-color': theme.inverseColor,
       border: `1px solid ${colors.grey}`,
       color: colors.black
     },

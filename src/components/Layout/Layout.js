@@ -26,6 +26,8 @@ const header = css`
 const main = css`
   padding: ${spacing.internalBreak}px;
   margin-top: ${spacing.external}px;
+  background-color: #fbfbfb;
+  height: 100vh;
 `;
 
 function Layout({ children }) {

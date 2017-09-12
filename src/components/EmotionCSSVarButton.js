@@ -15,6 +15,7 @@ const className = css`
   color: var(--textColor);
   animation: var(--animation);
   padding: 0.5em 0.8em;
+  margin: 4px;
   &:hover {
     background-color: var(--hoverBg);
     border: var(--hoverBorder);

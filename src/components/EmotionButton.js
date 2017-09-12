@@ -16,6 +16,7 @@ const Button = styled.button`
   color: ${colors.white};
   animation: ${fadeIn} 2s;
   padding: 0.5em 0.8em;
+  margin: 4px;
   &:hover {
     background-color: ${theme.inverseColor};
     border: 1px solid ${colors.grey};
