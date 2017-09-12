@@ -20,7 +20,7 @@ function Emotion() {
 }
 
 const enhance = compose(
-  withGithubInfo(['cssinjs/jss', 'cssinjs/react-jss']),
+  withGithubInfo(['emotion-js/emotion']),
   asDemo(EmotionButton)
 );
 
