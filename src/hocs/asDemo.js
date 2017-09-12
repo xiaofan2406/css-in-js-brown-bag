@@ -1,6 +1,14 @@
 import React from 'react';
+import { css } from 'emotion';
+import { getRange } from 'utils';
 
-const asDemo = Target => Component => {
+const controls = css`
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const asDemo = Component =>
   class Demo extends React.Component {
     state = {
       start: false
@@ -35,14 +43,26 @@ const asDemo = Target => Component => {
     render() {
       return (
         <div>
-          <Target label="Start" onClick={this.handleStart} />
-          <Target label="Reset" onClick={this.handleReset} />
-          {this.state.start && <Component {...this.props} />}
+          <div className={controls}>
+            <Component label="Start" onClick={this.handleStart} />
+            <Component label="Reset" onClick={this.handleReset} />
+          </div>
+          {this.state.start && (
+            <div>
+              {getRange(50).map((val, index) => (
+                <Component key={index} label="Click Me" size="large" />
+              ))}
+              {getRange(50).map((val, index) => (
+                <Component key={index} label="Click Me" />
+              ))}
+              {getRange(50).map((val, index) => (
+                <Component key={index} label="Click Me" size="small" />
+              ))}
+            </div>
+          )}
         </div>
       );
     }
-  }
-  return Demo;
-};
+  };
 
 export default asDemo;
