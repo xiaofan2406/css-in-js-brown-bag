@@ -8,6 +8,8 @@ const controls = css`
   justify-content: space-between;
 `;
 
+const DEMO_COUNT = 500;
+
 const asDemo = Component =>
   class Demo extends React.Component {
     state = {
@@ -49,13 +51,13 @@ const asDemo = Component =>
           </div>
           {this.state.start && (
             <div>
-              {getRange(50).map((val, index) => (
+              {getRange(DEMO_COUNT).map((val, index) => (
                 <Component key={index} label="Click Me" size="large" />
               ))}
-              {getRange(50).map((val, index) => (
+              {getRange(DEMO_COUNT).map((val, index) => (
                 <Component key={index} label="Click Me" />
               ))}
-              {getRange(50).map((val, index) => (
+              {getRange(DEMO_COUNT).map((val, index) => (
                 <Component key={index} label="Click Me" size="small" />
               ))}
             </div>
