@@ -33,13 +33,15 @@ const asDemo = Component =>
     }
 
     handleStart = () => {
+      window.Perf.stop();
       this.setState({ start: true });
       window.Perf.start();
     };
 
     handleReset = () => {
-      this.setState({ start: false });
       window.Perf.stop();
+      this.setState({ start: false });
+      window.Perf.start();
     };
 
     render() {
